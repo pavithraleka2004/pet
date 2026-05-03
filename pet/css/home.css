@@ -1,0 +1,1155 @@
+/* Global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: #4A1D5E;
+}
+
+.navbar-brand {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+}
+
+/* Hero Banner Section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to left, rgba(0,0,0,0.4) 0%, transparent 60%);
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  max-width: 500px;
+  margin-left: auto;
+}
+
+.btn-discover {
+  background-color: #fff;
+  color: #4A1D5E;
+  border: none;
+  padding: 12px 35px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-discover:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo Section */
+.logo-section {
+  padding: 60px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.logo-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.scrolling-logos-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 20s linear infinite;
+  gap: 80px;
+  align-items: center;
+  padding: 0 40px;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-logo {
+  height: 70px;
+  max-width: 130px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.house-overlay {
+  position: absolute;
+  right: 25%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.dog-img {
+  max-height: 100px;
+  display: block;
+}
+/* Featured Pets Section */
+.featured-pets-section {
+  background: #fff;
+  padding: 60px 0 50px;
+}
+
+.section-title-featured {
+  color: #5A2A6A;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paw-icon-featured {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}
+
+/* Featured Pet Cards */
+.featured-pet-card {
+  text-decoration: none !important;
+  color: #000 !important;
+  display: block;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featured-pet-card:hover {
+  transform: translateY(-5px);
+  text-decoration: none !important;
+}
+
+.featured-pet-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #f5f5f5;
+}
+
+.featured-pet-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pet-label {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Active Cat Card with Overlay */
+.pet-info-overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-align: left;
+  min-width: 140px;
+}
+
+.pet-type {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.pet-age-info {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.pet-gender-icon-overlay {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+}
+
+.featured-pet-name {
+  color: #000 !important;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0;
+  text-decoration: none !important;
+}
+
+.btn-find-more {
+  background: #E85A4F;
+  color: #fff !important;
+  padding: 12px 35px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+}
+
+.btn-find-more:hover {
+  background: #d44a3f;
+  transform: scale(1.05);
+  color: #fff !important;
+}
+
+/* Gift Banner Section */
+.gift-banner-section {
+  width: 100%;
+}
+
+.gift-banner {
+  background: url('./pet/images/rabbit-banner.jpg') center/cover no-repeat;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.gift-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+}
+
+.gift-banner-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 0;
+}
+
+.gift-banner-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.gift-banner-text {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+.btn-explore {
+  background: transparent;
+  color: #fff !important;
+  padding: 12px 30px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+  background: #fff;
+  color: #4A1D5E !important;
+}
+
+/* How Adoption Works */
+.how-adoption-section {
+  background: #fff;
+  padding: 60px 0 80px;
+}
+
+.how-subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.adoption-step-card {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.step-img-wrapper-adoption {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: rotate(-3deg);
+}
+
+.adoption-step-card:nth-child(2) .step-img-wrapper-adoption {
+  transform: rotate(2deg);
+}
+
+.adoption-step-card:nth-child(3) .step-img-wrapper-adoption {
+  transform: rotate(-2deg);
+}
+
+.step-img-adoption {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.step-number-adoption {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #E85A4F;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.step-title-adoption {
+  color: #5A2A6A;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.step-desc-adoption {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  max-width: 250px;
+  margin: 0 auto;
+}
+/* Gift Banner Section */
+.gift-banner-section {
+  width: 100%;
+}
+
+.gift-banner {
+  background: url('../images/rabbit\ 4.png') center/cover no-repeat;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.gift-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+}
+
+.gift-banner-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 0;
+}
+
+.gift-banner-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.gift-banner-text {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+.btn-explore {
+  background: transparent;
+  color: #fff !important;
+  padding: 12px 30px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+  background: #fff;
+  color: #4A1D5E !important;
+}
+
+/* Who We Are Section */
+.who-we-are-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.who-we-are-title {
+  color: #5A2A6A;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paw-img {
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
+  margin-top: -8px;
+}
+
+.who-we-are-text {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 850px;
+}
+
+.stats-card {
+  background: linear-gradient(135deg, #E85A4F 0%, #E64537 100%);
+  border-radius: 16px;
+  padding: 50px 30px;
+  margin-top: 50px;
+  box-shadow: 0 10px 40px rgba(232, 90, 79, 0.3);
+}
+
+.stat-item {
+  padding: 10px;
+}
+
+.stat-number {
+  color: #fff;
+  font-weight: 800;
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+/* Our Adoptions Categories Section */
+.adoption-categories-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.categories-title {
+  color: #5A2A6A;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paw-img-title {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+}
+
+.categories-subtitle {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.category-card {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+}
+
+.category-icon-box {
+  background: #4A1D5E;
+  border-radius: 12px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(74, 29, 94, 0.25);
+  transition: all 0.3s ease;
+}
+
+.category-card:hover .category-icon-box {
+  background: #5A2A6A;
+  box-shadow: 0 8px 25px rgba(74, 29, 94, 0.4);
+}
+
+.category-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.category-name {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+.blog-card {
+  text-decoration: none !important;
+  color: #000 !important;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.blog-card:hover,
+.blog-card:visited,
+.blog-card:active,
+.blog-card:focus {
+  transform: translateY(-5px);
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+.blog-card * {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.blog-img-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover .blog-img-wrapper {
+  box-shadow: 0 8px 20px rgba(74, 29, 94, 0.2);
+}
+
+.blog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-info {
+  padding: 0 4px;
+}
+
+.blog-title {
+  color: #000 !important;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  text-decoration: none !important;
+}
+
+.blog-desc {
+  color: #666 !important;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+  text-decoration: none !important;
+}
+
+/* Testimonies Section */
+.testimonies-section {
+  background: #fff;
+  padding: 70px 0 80px;
+}
+
+.testimonies-title {
+  color: #5A2A6A;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paw-icon-title {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Testimonial Item */
+.testimonial-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+.testimonial-left {
+  flex-direction: row;
+}
+
+.testimonial-right {
+  flex-direction: row;
+}
+
+/* Image Container */
+.testimonial-img-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.testimonial-img-wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid #4A1D5E;
+  transform: rotate(-4deg);
+}
+
+.testimonial-right .testimonial-img-wrapper {
+  transform: rotate(4deg);
+}
+
+.testimonial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Name Tag */
+.testimonial-name-tag {
+  position: absolute;
+  bottom: -15px;
+  left: 20px;
+  background: #4A1D5E;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 29, 94, 0.3);
+}
+
+.testimonial-right .testimonial-name-tag {
+  left: auto;
+  right: 20px;
+}
+
+.name-tag-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.name-tag-date {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* Quote Box */
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-quote-box {
+  background: #F3E8F7;
+  border-radius: 16px;
+  padding: 30px 35px;
+}
+
+.testimonial-quote {
+  color: #4A1D5E;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.testimonial-text {
+  color: #5A2A6A;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Footer Main */
+.footer-main {
+  position: relative;
+  margin-top: 60px;
+}
+
+/* Top Service Cards Section */
+.footer-cards-section {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -90px;
+}
+
+.footer-service-card {
+  background: #E88D3D;
+  border-radius: 24px;
+  padding: 35px 25px 30px;
+  text-align: center;
+  text-decoration: none !important;
+  color: #fff !important;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 160px;
+}
+
+.footer-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+.footer-card-red {
+  background: #E85A4F;
+}
+
+.footer-card-orange {
+  background: #E88D3D;
+}
+
+.footer-card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.footer-card-title {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.footer-card-arrow {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+/* Bottom Footer Section */
+.footer-bottom-section {
+  background: #4A1D5E;
+  color: #fff;
+  padding-top: 80px;
+  position: relative;
+}
+
+.footer-bottom-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #fff;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.footer-logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-tagline {
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 600;
+}
+
+.footer-heading {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+  transform: translateX(3px);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link {
+  color: #fff !important;
+  font-size: 1.3rem;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.social-link:hover {
+  opacity: 0.7;
+  transform: translateY(-3px);
+}
+
+.footer-copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 0.85rem;
+  margin: 0;
+  padding-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* ===============================
+   GLOBAL RESPONSIVE IMPROVEMENTS
+================================= */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Make images fully responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===============================
+   HERO SECTION RESPONSIVE
+================================= */
+
+.banner-wrapper {
+  height: 80vh; /* flexible instead of fixed */
+  min-height: 350px;
+}
+
+.hero-text h1 {
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+}
+
+.hero-text p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+/* ===============================
+   LOGO SCROLL SECTION
+================================= */
+
+.scrolling-logos-track {
+  animation: scrollLeft 25s linear infinite;
+}
+
+/* ===============================
+   FEATURED PETS GRID
+================================= */
+
+.featured-pet-card {
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   GIFT BANNER
+================================= */
+
+.gift-banner {
+  min-height: 50vh;
+  padding: 20px;
+}
+
+.gift-banner-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.gift-banner-text {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+}
+
+/* ===============================
+   ADOPTION STEPS
+================================= */
+
+.step-img-wrapper-adoption {
+  max-width: 180px;
+}
+
+/* ===============================
+   TESTIMONIAL SECTION
+================================= */
+
+.testimonial-item {
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.testimonial-img-wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.testimonial-content {
+  margin-top: 20px;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+.footer-service-card {
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   TABLET VIEW
+================================= */
+
+@media (max-width: 992px) {
+
+  .banner-wrapper {
+    height: 60vh;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text p {
+    margin: 0 auto;
+  }
+
+  .house-overlay {
+    display: none;
+  }
+
+  .testimonial-item {
+    flex-direction: column;
+  }
+}
+
+/* ===============================
+   MOBILE VIEW
+================================= */
+
+@media (max-width: 768px) {
+
+  .banner-wrapper {
+    height: 50vh;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo-marquee-wrapper {
+    height: 80px;
+  }
+
+  .scroll-logo {
+    height: 45px;
+  }
+
+  .category-icon-box {
+    width: 70px;
+    height: 70px;
+  }
+
+  .category-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .stats-card {
+    text-align: center;
+  }
+
+  .stat-item {
+    margin-bottom: 15px;
+  }
+
+  .testimonial-img-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .gift-banner-title {
+    font-size: 1.4rem;
+  }
+
+  .btn-discover,
+  .btn-find-more,
+  .btn-explore {
+    width: 100%;
+    text-align: center;
+  }
+
+  .testimonial-quote-box {
+    padding: 20px;
+  }
+
+  .footer-bottom-section {
+    text-align: center;
+  }
+}
